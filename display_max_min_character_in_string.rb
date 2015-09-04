@@ -9,9 +9,10 @@ def display_max_min_character_in_string(str)
   max_key = 0
   min_key = 0
   string_arry = str.split(%r{\s*}).sort
-  string_arry.each {|value|  hsh[value] = 0 }
-  string_arry.each {|value|  hsh[value] +=1 }
-  p hsh
+  string_arry.each {|value|  hsh[value] = 0 } # this create the hash with zero count
+  string_arry.each {|value|  hsh[value] +=1 } # this count the character
+  puts hsh
+  # this handle the max
   for i in 1..hsh.length-1 do
     if hsh[hsh.keys[max_key]] < hsh[hsh.keys[i]]
       max_key = i
@@ -21,6 +22,7 @@ def display_max_min_character_in_string(str)
   end
   puts "Max character is #{hsh.keys[max_key]} = #{hsh[hsh.keys[max_key]]} times."
 
+  # this handle the min
   for i in 1..hsh.length-1 do
     if hsh[hsh.keys[min_key]] > hsh[hsh.keys[i]]
       min_key = i
