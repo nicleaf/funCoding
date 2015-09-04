@@ -16,23 +16,18 @@ def display_max_min_character_in_string(str)
   for i in 1..hsh.length-1 do
     if hsh[hsh.keys[max_key]] < hsh[hsh.keys[i]]
       max_key = i
-    else
-      max_key = max_key
     end
   end
-  puts "Max character is #{hsh.keys[max_key]} = #{hsh[hsh.keys[max_key]]} times."
-
+  puts "Max character is '#{hsh.keys[max_key]}' = #{hsh[hsh.keys[max_key]]} times."
   # this handle the min
   for i in 1..hsh.length-1 do
     if hsh[hsh.keys[min_key]] > hsh[hsh.keys[i]]
       min_key = i
-    else
-      min_key = min_key
     end
   end
-  puts "Min character is #{hsh.keys[min_key]} = #{hsh[hsh.keys[min_key]]} times."
+  puts "Min character is '#{hsh.keys[min_key]}' = #{hsh[hsh.keys[min_key]]} times."
 end
 
-string = "abc )(*^&* abc abcCCCCCCCCCCCCCC aaaaaaaabba 123 123 123 1111111111111 4 bbbbbbbccccccccc here i am working on code exercise. ''''''''''''"
+string = "abc )(*^&* abc abcCCCCCCCCCCCCCC aaaaaaaaaaabba 123 123 123 1111111111111 4 bbbbbbbccccccccc here i am working on code exercise. ''''''''''''"
 puts string
 display_max_min_character_in_string(string)
