@@ -7,8 +7,10 @@
 def display_max_min_character_in_string(str)
   hsh = {}
   string_arry = str.split(%r{\s*}).sort
-  string_arry.each {|value|  hsh[value] = 0 } # this create the hash with zero count
-  string_arry.each {|value|  hsh[value] +=1 } # this count the character
+  string_arry.each do |value|
+    hsh[value] = 0 if hsh[value].nil? # this create the hash with zero count
+    hsh[value] +=1 if hsh[value] # this count the character
+  end
   puts "\n====== The hash ======"
   puts hsh
   puts "\n====== The result ======"
