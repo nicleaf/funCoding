@@ -6,8 +6,6 @@
 
 def display_max_min_character_in_string(str)
   hsh = {}
-  max_key = 0
-  min_key = 0
   string_arry = str.split(%r{\s*}).sort
   string_arry.each {|value|  hsh[value] = 0 } # this create the hash with zero count
   string_arry.each {|value|  hsh[value] +=1 } # this count the character
